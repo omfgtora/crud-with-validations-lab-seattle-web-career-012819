@@ -1,11 +1,13 @@
-<ul>
-<% @songs.each do |song| %>
-  <li>
-    <%= song.title %> - 
-    <%= song.release_year %> - 
-    <%= song.released %> - 
-    <%= song.genre %> - 
-    <%= song.artist_name %>
-  </li>
-<% end %>
-</ul>
+<table style="border: 1px solid">
+  <tbody>
+  <% @songs.each do |song| %>
+    <tr>
+      <td style="border: 1px solid; margin: 2px; padding: 2px"><%= song.title %></td>
+      <td style="border: 1px solid; margin: 2px; padding: 2px"><%= song.release_year %></td>
+      <td style="border: 1px solid; margin: 2px; padding: 2px"><%= song.released %></td>
+      <td style="border: 1px solid; margin: 2px; padding: 2px"><%= song.genre %></td>
+      <td style="border: 1px solid; margin: 2px; padding: 2px"><%= song.artist_name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
