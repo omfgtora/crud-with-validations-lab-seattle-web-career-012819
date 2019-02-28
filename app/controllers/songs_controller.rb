@@ -17,7 +17,7 @@ class SongsController < ApplicationController
       redirect_to @song
     else
       flash[:error] = "Something went wrong"
-      redirect_to new_song_path
+      render 'new'
     end
   end
 
@@ -27,7 +27,7 @@ class SongsController < ApplicationController
       redirect_to @song
     else
       flash[:error] = "Something went wrong"
-      redirect_to edit_song_path(@song)
+      render 'edit'
     end
   end
   
